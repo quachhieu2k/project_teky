@@ -1,0 +1,82 @@
+{% extends 'tuyendung/base.html' %}
+{% block conten %}
+<style>
+</style>
+
+<br><br><br>
+<div class="c-pano">
+        <div class="c-pano__caption">
+            <div class="container">
+                <h1 class="c-pano__title">Tuyển dụng</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="https://teky.vn">Trang chủ</a></li>
+					                        <li class="breadcrumb-item"><a href="https://teky.vn/about-us">Về Teky</a>
+                        </li>
+
+                    <li class="breadcrumb-item active" aria-current="page">Tuyển dụng</li>
+                </ol>
+				            </div><!-- container -->
+        </div><!-- c-pano__caption -->
+    </div>
+<div class="c-recruitment-top">
+                <span class="c-recruitment-top__tag">Top</span>
+                <div class="c-recruitment-top__thumb" id="featuredBannerImage">
+                    <figure><img src="https://teky.vn/wp-content/uploads/2019/11/73233884_2476087745840847_7962030920448344064_n.jpg" alt="img">
+                    </figure>
+                </div>
+                <div class="c-recruitment-top__content" id="c-recruitment-top__content">
+                    <div class="c-recruitment-top__row"><span class="c-recruitment-top__place">Nhiều cơ sở</span>
+                    </div>
+                    <div class="c-recruitment-top__row">Nhiều cơ sở
+                    </div>
+                    <div class="c-recruitment-top__line"></div>
+                    <div class="c-recruitment-top__row"><span class="c-recruitment-top__title"><span class="text-uppercase text-red">Tuyển dụng: </span>[TOÀN QUỐC] CHUYÊN VIÊN TƯ VẤN TUYỂN SINH (Thu nhập lên tới 25 triệu/tháng)</span>
+                    </div>
+                    <div class="c-recruitment-top__row is-desc">
+                    Tiếp nhận, xử lý danh sách khách hàng tiềm năng từ các hoạt động, chiến dịch Marketing để chuyển đổi thành khách hàng. Thuyết phục khách hàng là các phụ huynh đăng kí trải nghiệm và ghi danh các sản phẩm, khóa học công nghệ dành cho trẻ em của…
+                    </div>
+                    <div class="c-recruitment-top__row">
+                        <div class="row">
+                            <div class="col-6 col-md-4 text-center">
+                                <img src="https://teky.vn/wp-content/themes/new-theme/static/images/agreement.png" alt="agreement">
+                                <span class="medium-text">7,000,000+</span>
+                                <span class="small-text">Lương (Có hoa hồng)</span>
+                            </div>
+                            <div class="col-6 col-md-4 text-center">
+                                <img src="https://teky.vn/wp-content/themes/new-theme/static/images/promoted.png" alt="promoted">
+                                <span class="medium-text">Thăng tiến</span>
+                                <span class="small-text">Lộ trình thăng tiến rõ ràng</span>
+                            </div>
+                            <div class="col-12 col-md-4"><a class="btn btn-primary btn-block text-uppercase btn-lg is-shadow" href="https://teky.vn/recruitment/hot-job-chuyen-vien-tu-van-tuyen-sinh/">Xem
+                                    chi tiết</a></div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+<br><br><br>
+{% for list in thongtin %}
+<div class="c-recruitment-item">
+
+    <div class="c-recruitment-item__area"><span>{{list.where}}</span></div>
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="c-recruitment-item__row"><a class="c-recruitment-item__title" href="{{list.link_lk}}"><span class="text-uppercase text-primary">Cần tuyển: </span>{{list.title}}</a></div>
+            <div class="c-recruitment-item__row">
+                <span class="c-recruitment-item__price">{{list.price}}</span>
+                <span class="space">|</span>Có hoa hồng <span class="space">|</span><b>Làm việc tại: </b>{{list.workplace}}<span class="space">|</span><b>Hết hạn nộp hồ sơ: </b> {{list.end_date}}
+            </div>
+            <div class="c-recruitment-item__row">
+                <div class="c-recruitment-tags">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <a class="btn btn-primary btn-block btn-lg text-uppercase is-shadow" href="{{list.link_lk}}">Xem
+                                        chi tiết<span class="small-text">&amp; nộp hồ sơ ứng tuyển</span></a>
+        </div>
+    </div>
+
+</div>
+{%endfor%}
+{% endblock %}
