@@ -1,0 +1,196 @@
+/*---------- home popup css ----------*/
+.custom-modal{
+  .modal-title{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 15px;
+    position: relative;
+    z-index: 1;
+    min-height: 42px;
+    &:before{
+      content: "";
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
+      width: 5px;
+      height: 41px;
+      background-image: url("../images/box-dot.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    span{
+      display: block;
+      font-size: 14px;
+      text-transform: none;
+      font-weight: 400;
+    }
+  }
+  .modal-header{
+    padding: 15px;
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    &:before{
+      content: "";
+      position: absolute;
+      z-index: 2;
+      left: 15px;
+      right: 15px;
+      bottom: 0;
+      height: 1px;
+      border-bottom: 1px dashed $color-text;
+    }
+    .close{
+      opacity: 1;
+      background-image: url("../images/close.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      position: absolute;
+      z-index: 3;
+      top: 5px;
+      right: 5px;
+      margin: 0;
+      &:focus{
+        outline: none;
+      }
+      span{
+        overflow: hidden;
+        text-indent: -999px;
+        color: $color-white;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  .modal-body{
+    padding: 15px;
+  }
+}
+.c-modal-support{
+  &__footer{
+    text-align: right;
+    padding: 20px 0 0;
+    p{
+      margin: 0;
+    }
+  }
+  &__banner{
+    display: none;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .b-form{
+    .form-control{
+      padding: 1.375rem .75rem;
+      //text-transform: uppercase;
+      font-family: $font-arial;
+    }
+    select.form-control{
+      height: 44px;
+      padding: 0rem .75rem;
+    }
+    .btn{
+      padding: 0.625rem .75rem;
+    }
+    .btn-lg{
+      min-width: 155px;
+    }
+    .form-group{
+      margin-bottom: 8px;
+      &.is-tel{
+        position: relative;
+        z-index: 1;
+        .form-control{
+          padding: 1.375rem .75rem 1.375rem 70px;
+        }
+        .c-support-form__pre{
+          position: absolute;
+          z-index: 3;
+          top: 5px;
+          line-height: 34px;
+          height: 34px;
+          left: 0;
+          width: 58px;
+          text-align: center;
+          border-right: 1px solid $color-black;
+        }
+      }
+    }
+  }
+}
+//home popup responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .custom-modal{
+    .modal-header{
+      padding: 20px;
+    }
+    .modal-body{
+      padding: 20px;
+    }
+    .modal-title{
+      font-size: 20px;
+    }
+  }
+  .c-modal-support{
+    .modal-dialog{
+      max-width: 800px;
+    }
+    .modal-content{
+      padding-left: 300px;
+      min-height: 537px;
+    }
+    .modal-body{
+      position: static;
+    }
+    &__banner{
+      display: block;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 300px;
+      overflow: hidden;
+      @include border-radius(.3rem 0 0 .3rem);
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .c-modal-support{
+    .b-form{
+      .form-control{
+        padding:  1.875rem .75rem;
+      }
+      select.form-control{
+        height: 60px;
+        padding: 0rem .75rem;
+      }
+      .btn{
+        padding: 1.125rem .75rem;
+      }
+      .form-group{
+        &.is-tel{
+          .form-control{
+            padding: 1.875rem .75rem 1.875rem 70px;
+          }
+          .c-support-form__pre{
+            top: 10px;
+            height: 40px;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+//end home popup responsive css
+/*---------- end home popup css ----------*/

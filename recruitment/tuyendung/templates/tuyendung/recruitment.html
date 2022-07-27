@@ -1,0 +1,242 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="content-language" content="vi" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="Template" />
+  <meta name='COPYRIGHT' content='&copy; Template' />
+  <meta name="robots" content="noodp,index,follow" />
+  <meta name="google" content="notranslate" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta property="og:title" content="Teky - Tuyển dụng" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta property="og:url" content="website link" />
+  <meta property="og:image" content="image description" />
+  <meta property="og:description" content="website description" />
+  <meta property="og:site_name" content="website name" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <title>Teky - Tuyển dụng</title>
+  {% load static %}
+  <!-- Bootstrap CSS -->
+  <link href="{% static 'css\bootstrap.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'css\owl.carousel.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'css\fontawesome-all.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'css\jquery.fancybox.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'css\style.min.css' %}" rel="stylesheet" />
+</head>
+<body>
+<div class="l-nav">
+  <div class="container">
+    <div class="c-header">
+      <button type="button" class="c-menu-expand js-menu-expand"><span></span></button>
+      <div class="c-logo"><a href="#"><img src="{%static 'images/logo-teky.png'%} " alt="logo" /></a></div>
+      <div class="c-menu">
+        <ul>
+          <li><a href="#">Về Teky</a></li>
+          <li><a href="#">Khoá học</a></li>
+          <li><a href="#">Hợp tác</a></li>
+          <li><a href="#">Giảng viên</a></li>
+        </ul>
+      </div><!-- c-menu -->
+      <div class="c-language">
+        <div class="c-language__curent"><img src="{%static 'images/flag-vi.png'%}" alt="vi" /></div>
+        <div class="c-dropdown-menu">
+          <ul>
+            <li><a href="#"><img src= "{%static 'images/flag-vi.png'%} " alt="vi" /> Tiếng Việt</a></li>
+            <li><a href="#"><img src="{%static 'images/flag-en.png'%}" alt="en" /> English</a></li>
+          </ul>
+        </div>
+      </div><!-- c-language -->
+    </div><!-- c-header -->
+  </div><!-- container -->
+</div><!-- l-nav -->
+<div class="c-blank-space"></div>
+<div class="c-pano is-recruitment">
+  <div class="c-pano__caption">
+    <div class="container">
+      <h1 class="c-pano__title">Tuyển dụng</h1>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="#">Về Teky</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Tuyển dụng</li>
+      </ol>
+    </div><!-- container -->
+  </div><!-- c-pano__caption -->
+</div><!-- c-pano -->
+<div class="c-block is-single">
+  <div class="container">
+    <div class="c-recruitment-top">
+      <span class="c-recruitment-top__tag">Top</span>
+      <div class="c-recruitment-top__thumb"><figure><img src="{%static 'upload/press_2.jpg' %}" alt="img" /></figure></div>
+      <div class="c-recruitment-top__content">
+        <div class="c-recruitment-top__row"><span class="c-recruitment-top__place">Nhiều cơ sở</span></div>
+        <div class="c-recruitment-top__row">Nhiều cơ sở </div>
+        <div class="c-recruitment-top__line"></div>
+        <div class="c-recruitment-top__row"><span class="c-recruitment-top__title"><span class="text-uppercase text-red">Tuyển dụng: </span>Chuyển viên tư vấn tuyển sinh</span></div>
+        <div class="c-recruitment-top__row is-desc">
+          Thấu hiểu khách hàng mục tiêu, các vấn đề người học tiếng Anh thường xuyên gặp phải để lắng nghe và tư vấn phù hợp với nhu cầu của khách hàng.
+        </div>
+        <div class="c-recruitment-top__row">
+          <div class="row">
+            <div class="col-6 col-md-4 text-center">
+              <img src="images/agreement.png" alt="agreement" />
+              <span class="medium-text">7.000.000+</span>
+              <span class="small-text">Lương (Có hoa hồng)</span>
+            </div>
+            <div class="col-6 col-md-4 text-center">
+              <img src="images/promoted.png" alt="promoted" />
+              <span class="medium-text">Thăng tiến</span>
+              <span class="small-text">Lộ trình thăng tiến rõ ràng</span>
+            </div>
+            <div class="col-12 col-md-4"><a class="btn btn-primary btn-block text-uppercase btn-lg is-shadow" href="#">Xem chi tiết</a></div>
+          </div>
+        </div>
+      </div>
+    </div><!-- c-recruitment-top -->
+    <div class="c-smart-cat-outer">
+      <div class="c-smart-cat">
+        <div class="c-smart-cat__current">
+          <div class="c-smart-cat__name">Toàn quốc</div>
+          <span class="c-smart-cat__desc d-none d-md-block">Tổng có <b class="text-red">{{ count_tq }}</b> cần tuyển</span>
+          <span class="c-smart-cat__desc d-md-none">50</span>
+        </div>
+        <div class="c-smart-cat__dropdown">
+          <ul>
+            <li><a href="#">Toàn quốc <span>{{ count_tq }} vị trí</span></a></li>
+            <li><a href="#">Hà Nội <span>{{ count_hn }} vị trí</span></a></li>
+            <li><a href="#">Hồ Chí Minh <span>{{ count_hcm }} vị trí</span></a></li>
+            <li><a href="#">Bình Dương <span>{{ count_bd }} vị trí</span></a></li>
+            <li><a href="#">Quảng Ninh <span>{{ count_qn }} vị trí</span></a></li>
+            <li><a href="#">Hải Phòng <span>{{ count_hp }} vị trí</span></a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div><!-- c-smart-cat-outer -->
+    {% for file in thongtin %}
+
+    <div class="c-recruitment-list">
+      <ul class="clearfix">
+
+        <li>
+          <div class="c-recruitment-item">
+
+            <div class="c-recruitment-item__area"><span>{{ file.where }}</span></div>
+
+            <div class="row">
+              <div class="col-lg-9">
+                <div class="c-recruitment-item__row"><a class="c-recruitment-item__title" href="#"><span class="text-uppercase text-primary">Cần tuyển: </span>{{ file.title }}</a></div>
+                <div class="c-recruitment-item__row">
+                  <span class="c-recruitment-item__price">{{ file.price }}</span><span class="space">|</span>Có hoa hồng<span class="space">|</span><b>Làm việc tại: {{ file.workplace }} </b><span class="space">|</span><b>Hết hạn nộp hồ sơ: </b>Luôn tuyển
+                </div>
+                <div class="c-recruitment-item__row">
+                  <div class="c-recruitment-tags"><a href="#">English</a><a href="#">Bán hàng</a><a href="#">Marketing</a></div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <a class="btn btn-primary btn-block btn-lg text-uppercase is-shadow" href="#">Xem chi tiết<span class="small-text">& nộp hồ sơ ứng tuyển</span></a>
+              </div>
+            </div>
+          </div><!-- c-recruitment-item -->
+        </li>
+      </ul>
+
+    </div><!-- c-recruitment-list -->
+
+    {% endfor %}
+  </div><!-- container -->
+</div><!-- c-block -->
+<div class="l-footer">
+  <div class="c-footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="c-footer-label">Về Teky<i class="fas fa-plus"></i></div>
+          <div class="c-footer-content">
+            <div class="c-footer-menu">
+              <ul>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Đội ngũ lãnh đạo</a></li>
+                <li><a href="#">Đội ngũ giảng viên</a></li>
+                <li><a href="#">Báo chí nói về TEKY</a></li>
+                <li><a href="#">Giải thưởng</a></li>
+                <li><a href="#">Sự kiện</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+              </ul>
+            </div><!-- c-footer-menu -->
+          </div><!-- c-footer-content -->
+        </div><!-- col -->
+        <div class="col-lg-6">
+          <div class="c-footer-label">Chương trình học<i class="fas fa-plus"></i></div>
+          <div class="c-footer-content">
+            <div class="c-footer-menu">
+              <ul>
+                <li><a href="#">Lập trình & phát triển ứng dụng</a></li>
+                <li><a href="#">Robot và điện tử tự động</a></li>
+                <li><a href="#">3D và truyền thông đa phương tiện</a></li>
+              </ul>
+            </div><!-- c-footer-menu -->
+          </div><!-- c-footer-content -->
+        </div><!-- col -->
+        <div class="col-lg-3">
+          <div class="c-footer-label">Giờ hoạt động<i class="fas fa-plus"></i></div>
+          <div class="c-footer-content">
+            <div class="b-maincontent">
+              <p><b>THỨ 3</b> đến <b>THỨ 6: </b>08:30 - 20:30</p>
+              <p><b>THỨ 7 - Chủ Nhật: </b>08:30 - 20:30</p>
+              <p><b>THỨ 2: </b>Không làm việc</p>
+            </div><!-- b-maincontent -->
+            <div class="c-footer-social">
+              <h4>Kết nối với chúng tôi</h4>
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div><!-- c-footer-content -->
+        </div><!-- col -->
+      </div><!-- row -->
+    </div><!-- container -->
+  </div><!-- c-footer-main -->
+  <div class="c-footer-bottom">
+    <div class="container">
+      <div class="c-footer-logo"><a href="#"><img src="images/logo-teky.png" alt="logo" /></a></div>
+      <div class="c-copyright"><b>Copyright</b> © 2014-2018 <b>TEKY Academy. All Rights Reserved.</b> <a href="#">Accessibility</a>, <a href="#">User Agreement</a>, <a href="#">Privacy</a>, <a href="#">Cookies</a></b></div>
+    </div><!-- container -->
+  </div><!-- c-footer-bottom -->
+</div><!-- l-footer -->
+<div class="c-smart-float">
+  <ul class="clearfix">
+    <li>
+      <a href="#" title="Hotline">
+        <i class="icon24-smartphone"></i>
+        <span class="c-smart-float__label">Hotline lãnh đạo</span>
+        <span class="c-smart-float__bold">0936 17 1983</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" title="Hỏi đáp">
+        <i class="icon24-telemarketer"></i>
+        <span class="c-smart-float__label">Bạn cần trợ giúp?</span>
+        <span class="c-smart-float__bold">Trung tâm hỏi đáp</span>
+      </a>
+    </li>
+  </ul>
+</div><!-- c-smart-float -->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{%static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="{%static 'js/jquery-migrate-1.4.1.js' %}"></script>
+<script src="{%static 'js/popper.min.js' %}" ></script>
+<script src="{%static 'js/bootstrap.min.js' %}"></script>
+<script src="{%static 'js/owl.carousel.min.js' %}"></script>
+<script src="{%static 'js/jquery.matchHeight-min.js' %}"></script>
+<script src="{%static 'js/jquery.fancybox.min.js' %}"></script>
+<script src="{%static 'js/function.js' %}"></script>
+<script src="{%static 'js/style.js' %}"></script>
+</body>
+</html>

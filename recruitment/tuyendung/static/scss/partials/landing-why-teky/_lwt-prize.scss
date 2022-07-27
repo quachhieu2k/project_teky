@@ -1,0 +1,131 @@
+/*---------- landing why teky prize css ----------*/
+.lwt-prize-outer{
+  padding-top: 20px;
+  position: relative;
+  z-index: 3;
+  margin-bottom: 25px;
+}
+.lwt-prize-slider{
+  padding: 20px 0;
+  background: $color-white;
+  @include box-shadow(0 0 8px rgba($color-black,0.2));
+  @include border-radius(4px);
+  &__inner{
+    max-width: 970px;
+    margin: 0 auto;
+  }
+}
+.lwt-prize-img{
+  text-align: center;
+  img{
+    max-width: 75%;
+  }
+}
+.lwt-prize-item{
+  margin: 0 auto;
+  max-width: 100px;
+  &__inner{
+    padding-top: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  figure{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img{
+    display: inline !important;
+    width: auto !important;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+.lwt-prize-scroll{
+  text-decoration: none;
+  color: $color-time;
+  position: absolute;
+  z-index: 2;
+  top: - 65px;
+  left: 0;
+  text-transform: uppercase;
+  display: none;
+  &:before{
+    content: "";
+    width: 16px;
+    height: 28px;
+    background-image: url("../images/tail-down.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+  span{
+    display: block;
+    color: $color-time;
+  }
+}
+a.lwt-prize-scroll{
+  text-decoration: none;
+}
+//landing why teky prize responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .lwt-prize-outer{
+    padding-top: 0;
+    margin-top: -20px;
+  }
+  .lwt-prize-img{
+    position: absolute;
+    z-index: 2;
+    left: percentage(540/1170);
+    width: percentage(431/1170);
+    top: -1px;
+    height: 1px;
+    img{
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-width: none;
+    }
+  }
+  .lwt-prize-scroll{
+    display: block;
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .lwt-prize-outer{
+    margin-top: -100px;
+    margin-bottom: 35px;
+  }
+  .lwt-prize-img{
+    left: percentage(467/1170);
+  }
+  a.lwt-prize-scroll{
+    @include transition-all(0.2s);
+    &:hover{
+      color: $color-primary;
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .lwt-prize-outer{
+    margin-top: -120px;
+  }
+}
+//end landing why teky prize responsive css
+/*---------- end landing why teky prize css ----------*/

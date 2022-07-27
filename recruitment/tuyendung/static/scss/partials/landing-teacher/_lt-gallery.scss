@@ -1,0 +1,121 @@
+/*---------- landing teacher gallery css ----------*/
+.lt-gallery-outer{
+  overflow: hidden;
+}
+.lt-gallery-slider{
+  margin-left: 10px;
+  margin-right: 10px;
+  &.c-template-button{
+    .owl-carousel{
+      display: flex;
+      flex-direction: column-reverse;
+      .owl-nav{
+       padding-top: 0;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+.lt-gallery-item{
+  overflow: hidden;
+  margin: 5px;
+  @include border-radius(4px);
+  @include box-shadow(0 0 5px rgba($color-black,0.15));
+  a{
+    display: block;
+    position: relative;
+    z-index: 1;
+    padding-top: 100%;
+    &:before{
+      content: "";
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba($color-primary,0.5);
+      border: 5px solid $color-secondary;
+      opacity: 0;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      z-index: 4;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("../images/icons/icon64-expand.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      opacity: 0;
+    }
+    img{
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      min-height: 100%;
+      height: auto;
+    }
+  }
+}
+//landing teacher gallery responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .lt-gallery-slider{
+    margin-left: -17%;
+    margin-right: -17%;
+  }
+  .lt-gallery-item{
+    a{
+      &:before{
+        border-width: 10px;
+      }
+    }
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .lt-gallery-slider{
+    margin-left: -12%;
+    margin-right: -12%;
+    &.c-template-button{
+      .owl-carousel{
+        .owl-nav{
+          padding-bottom: 40px;
+          button.owl-prev, button.owl-next{
+            position: static;
+            margin-top: 0;
+            margin: 0 20px;
+          }
+        }
+      }
+    }
+  }
+  .lt-gallery-item{
+    a{
+      &:before{
+        @include transition-all(0.2);
+      }
+      &:after{
+        @include transition-all(0.2);
+      }
+      &:hover{
+        &:before{
+          opacity: 1;
+        }
+        &:after{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+
+}
+//end landing teacher gallery responsive css
+/*---------- end landing teacher gallery css ----------*/

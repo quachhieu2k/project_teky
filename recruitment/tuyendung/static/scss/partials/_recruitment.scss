@@ -1,0 +1,275 @@
+/*---------- recruitment css ----------*/
+.c-recruitment-item{
+  padding: 15px 15px 15px 50px;
+  position: relative;
+  z-index: 1;
+  min-height: 140px;
+  &__area{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    span{
+      display: block;
+      font-weight: 700;
+      text-transform: uppercase;
+      width: 140px;
+      height: 30px;
+      text-align: center;
+      @include transform(rotate(-90deg));
+      position: absolute;
+      z-index: 2;
+      top: 55px;
+      left: -55px;
+      line-height: 32px;
+      font-size: 15px;
+    }
+  }
+  &__row{
+    margin-bottom: 10px;
+    .space{
+      margin: 0 10px;
+    }
+  }
+  .c-recruitment-item__title{
+    text-decoration: none;
+    color: $color-text;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  &__price{
+    color: $color-red;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+.c-recruitment-tags{
+  a{
+    display: inline-block;
+    vertical-align: middle;
+    color: $color-text;
+    border: 1px solid $color-border;
+    background: $color-white;
+    padding: 2px 7px;
+    line-height: 1.3;
+    margin: 0 4px 4px 0;
+    font-size: 13px;
+    text-decoration: none;
+    @include border-radius(10px);
+  }
+}
+.c-recruitment-list{
+  margin-bottom: 25px;
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+      &:nth-child(2n+1){
+        .c-recruitment-item{
+          background: $color-bg2;
+          &__area{
+            background: $color-bg4;
+          }
+        }
+      }
+      &:nth-child(2n){
+        .c-recruitment-item{
+          &__area{
+            background: $color-bg3;
+          }
+        }
+      }
+    }
+  }
+}
+.c-recruitment-top{
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+  margin-bottom: 25px;
+  margin-top: -175px;
+  background: $color-white;
+  @include border-radius(4px);
+  @include box-shadow(0 1px 5px rgba($color-black,0.2));
+  &__thumb{
+    overflow: hidden;
+    figure{
+      margin: 0;
+      position: relative;
+      z-index: 1;
+      padding-top: percentage(300/575);
+      &:before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        @include linear-gradient(bottom, $color-white, transparent);
+      }
+    }
+    img{
+      width: 100%;
+      height: auto;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      min-height: 100%;
+    }
+  }
+  &__tag{
+    position: absolute;
+    z-index: 3;
+    background: $color-secondary;
+    width: 140px;
+    height: 140px;
+    right: -80px;
+    top: -80px;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 110px;
+    @include transform(rotate(45deg));
+    @include box-shadow(0 0 4px rgba($color-black,0.2));
+  }
+  &__content{
+    padding: 15px;
+  }
+  &__row{
+    margin-bottom: 3px;
+    line-height: 20px;
+    &:last-child{
+      margin: 0;
+    }
+    &.is-desc{
+      margin-bottom: 15px;
+    }
+    .medium-text{
+      display: block;
+      font-weight: 700;
+      font-size: 18px;
+      color: $color-orange;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    .small-text{
+      display: block;
+      font-size: 12px;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+  }
+  &__line{
+    margin: 10px 0;
+    height: 1px;
+    border-bottom: 1px dashed $color-time;
+  }
+  &__place{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  &__title{
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+  }
+}
+//recruitment responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .c-recruitment-top{
+    margin-bottom: 35px;
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-recruitment-item{
+    .c-recruitment-item__title{
+      @include transition-all(0.2s);
+      &:hover{
+        color: $color-primary;
+      }
+    }
+  }
+  .c-recruitment-tags{
+    a{
+      @include transition-all(0.2s);
+      &:hover{
+        background: $color-primary;
+        color: $color-white;
+        border-color: $color-primary;
+      }
+    }
+  }
+  .c-recruitment-top{
+    margin-bottom: 45px;
+    min-height: 250px;
+    &__thumb{
+      float: left;
+      width: percentage(2/5);
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      figure{
+        height: 100%;
+        padding-top: 0;
+        &:before{
+          left: 50%;
+          top: 0;
+          @include linear-gradient(right, $color-white, transparent);
+        }
+      }
+    }
+    &__content{
+      float: right;
+      width: percentage(3/5);
+    }
+    &__row{
+      .btn-lg{
+        padding: 1.3rem 1.75rem;
+      }
+      &.is-desc{
+        overflow: hidden;
+        max-height: 40px;
+      }
+      .small-text{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .c-recruitment-top{
+    min-height: 300px;
+    &__thumb{
+      width: percentage(1/2);
+    }
+    &__content{
+      width: percentage(1/2);
+      padding: 25px 20px 0 15px;
+    }
+    &__line{
+      margin: 15px 0;
+    }
+    &__row{
+      &.is-desc{
+        margin-bottom: 20px;
+      }
+      .btn-lg{
+        padding: 1.5rem 1.75rem;
+      }
+    }
+  }
+}
+//end recruitment responsive css
+/*---------- end recruitment css ----------*/

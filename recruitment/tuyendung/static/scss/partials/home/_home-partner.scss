@@ -1,0 +1,155 @@
+/*---------- home partner css ----------*/
+.c-home-partner{
+  overflow: hidden;
+  &__right{
+    background: $color-secondary;
+    position: relative;
+    z-index: 3;
+    padding: 25px 0;
+    &:before{
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      background: $color-secondary;
+      width: 1000px;
+      left: -999px;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      bottom: 0;
+      background: $color-secondary;
+      width: 1000px;
+      right: -999px;
+    }
+    .c-box{
+      position: relative;
+      z-index: 3;
+      .c-box__title{
+        overflow: inherit;
+        .c-box__title__shadow{
+          opacity: 0.5;
+        }
+      }
+    }
+    .b-maincontent{
+      max-width: 490px;
+    }
+  }
+  &__left{
+    padding: 25px 0;
+    position: relative;
+    z-index: 4;
+  }
+}
+.c-partner-grid{
+  ul{
+    list-style: none;
+    margin: 0 -5px;
+    padding: 0;
+    li{
+      float: left;
+      width: percentage(1/2);
+      padding-bottom: 15px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}
+.c-logo-item{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 175px;
+  &__inner{
+    position: relative;
+    z-index: 1;
+    padding-top: percentage(70/175);
+  }
+  a{
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+//home partner responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+  .c-partner-grid{
+    ul{
+      li{
+        width: percentage(1/3);
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .c-home-partner{
+    &__right{
+      padding: 30px 0;
+    }
+    &__left{
+      padding: 30px 0;
+    }
+  }
+  .c-partner-grid{
+    ul{
+      margin: 0 -10px;
+      li{
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-home-partner{
+    &__right{
+      padding: 40px 0 40px 15px;
+      float: right;
+      width: percentage(510/1170);
+      &:before{
+        background-image: url("../images/partner-caret.png");
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-color: transparent;
+        width: 120px;
+        left: -119px;
+        background-size: 100% 100%;
+      }
+    }
+    &__left{
+      padding: 40px 0;
+      float: left;
+      width: percentage(545/1170);
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .c-home-partner{
+    &__right{
+      padding: 50px 0 50px 25px;
+    }
+    &__left{
+      padding: 50px 0;
+    }
+  }
+}
+//end home partner responsive css
+/*---------- end home partner css ----------*/

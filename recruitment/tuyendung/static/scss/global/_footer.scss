@@ -1,0 +1,227 @@
+/*---------- footer css ----------*/
+.l-footer{
+  border-top: 1px solid $color-black;
+}
+.c-footer-main{
+  padding: 20px 0 10px;
+}
+.c-footer-label{
+  color: $color-text;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 15px;
+  font-weight: 700;
+  .fas{
+    float:right;
+    font-size:20px;
+    width:20px;
+    height:20px;
+    text-align:center;
+    cursor:pointer;
+    color: $color-primary;
+  }
+}
+.c-footer-content{
+  padding-bottom: 20px;
+  display: none;
+  .b-maincontent{
+    color: $color-text;
+    a{
+      color: $color-text;
+      text-decoration: none;
+    }
+    h2{
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $color-gray;
+    }
+    p{
+      padding-left: 14px;
+      position: relative;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      &:before{
+        content: "";
+        background-image: url(../images/icons/icon-dot.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 4px;
+        font-size: 8px;
+      }
+    }
+  }
+}
+.c-footer-menu{
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+      margin-bottom: 7px;
+      position: relative;
+      z-index: 1;
+      padding-left: 14px;
+      &:before{
+        content: "";
+        background-image: url(../images/icons/icon-dot.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 4px;
+        font-size: 8px;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+      a{
+        text-decoration: none;
+        padding-left: 2px;
+      }
+    }
+  }
+}
+.c-footer-social{
+  h4{
+    color: $color-text;
+    font-size: 16px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
+    font-weight: 700;
+  }
+  a{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    color: $color-text;
+    font-size: 24px;
+  }
+}
+.c-footer-bottom{
+  height: 50px;
+  border-top: 1px solid;
+  background: $color-bg2;
+  .c-footer-logo{
+    img{
+      max-width: 90px;
+      display: block;
+      margin: auto;
+    }
+  }
+  .c-copyright{
+    margin-top: 15px;
+    text-align: center;
+    a{
+      text-decoration: none;
+    }
+  }
+}
+.c-fixed-text{
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  a{
+    right: 0;
+    padding: 10px;
+    transform: rotate(-90deg) translate(0, -100%);
+    transform-origin: 100% 0;
+    position: absolute;
+    background: $color-secondary;
+    width: 140px;
+    font-weight: bold;
+    color: $color-text;
+    text-transform: uppercase;
+    @include border-radius(10px 10px 0 0);
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+//footer responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-footer-main{
+    padding: 50px 0;
+  }
+  .c-footer-label{
+    margin-bottom: 25px;
+    .fas{
+      display: none;
+    }
+  }
+  .c-footer-menu{
+    ul{
+      li{
+        a{
+          @include transition-all(0.2s);
+          &:hover{
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+  .c-footer-content{
+    padding-bottom: 0;
+    display: block !important;
+    .b-maincontent{
+      a{
+        @include transition-all(0.2s);
+        &:hover{
+          color: $color-primary;
+        }
+      }
+      .p-icon{
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .c-footer-social{
+    a{
+      @include transition-all(0.2s);
+      &:hover{
+        color: $color-primary;
+      }
+    }
+  }
+  .c-footer-bottom{
+    .c-footer-logo{
+      float: left;
+    }
+    .c-copyright{
+      float: right;
+      a{
+        @include transition-all(0.2s);
+        &:hover{
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+
+}
+//end footer responsive css
+/*---------- end footer css ----------*/

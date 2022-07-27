@@ -1,0 +1,84 @@
+/*---------- landing why teky course css ----------*/
+.lwt-course-shadow{
+  position: relative;
+  z-index: 1;
+  &:before{
+    content: "";
+    background: #fffbf8;
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    transform: skewY(-15deg);
+  }
+  .lwt-course-bg{
+    position: relative;
+    z-index: 3;
+  }
+}
+.lwt-course-bg{
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  &__right{
+    margin-bottom: 20px;
+  }
+  &__img{
+    text-align: center;
+    img{
+      max-width: 60%;
+    }
+  }
+}
+//landing why teky course responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .lwt-course-bg{
+    &__right{
+      margin-bottom: 0;
+      float: right;
+      width: percentage(455/1170);
+    }
+    &__left{
+      float: left;
+      width: percentage(610/1170);
+    }
+    &__img{
+      margin-right: percentage(-115/450);
+      margin-top: -100px;
+      position: relative;
+      z-index: 1;
+      &:before{
+        content: "";
+        position: absolute;
+        z-index: 2;
+        width: 156px;
+        height: 156px;
+        background: $color-secondary;
+        left: percentage(74/455);
+        bottom: percentage(25/667);
+        @include border-radius(100%);
+      }
+      img{
+        width: 100%;
+        max-width: none;
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .lwt-course-bg{
+    &__img{
+      margin-top: -150px;
+    }
+  }
+}
+//end landing why teky course responsive css
+/*---------- end landing why teky course css ----------*/

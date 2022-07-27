@@ -1,0 +1,107 @@
+/*---------- home press css ----------*/
+.c-press-in{
+  &__thumb{
+    overflow: hidden;
+    a{
+      display: block;
+      position: relative;
+      z-index: 1;
+      padding-top: percentage(322/467);
+      &:before{
+        content: "";
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include linear-gradient(bottom,rgba($color-black,0.9),transparent);
+      }
+      &:after{
+        content: "";
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($color-primary,0.7);
+        opacity: 0;
+        z-index: 1;
+      }
+      img{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+      }
+    }
+  }
+  &__content{
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 15px 12px 118px;
+  }
+  &__logo{
+    width: 86px;
+    height: 36px;
+    text-align: center;
+    float: left;
+    margin-left: -105px;
+    img{
+      width: auto;
+      height: auto;
+      max-width: 86px;
+      max-height: 36px;
+    }
+  }
+  .c-press-in__title{
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+}
+//home press responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-press-in{
+    &__thumb{
+      a{
+        &:before{
+          @include transition-all(0.2s);
+        }
+        &:after{
+          @include transition-all(0.2s);
+        }
+        &:hover{
+          &:before{
+            opacity: 0;
+            z-index: 1;
+          }
+          &:after{
+            opacity: 1;
+            z-index: 3;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+
+}
+//end home press responsive css
+/*---------- end home press css ----------*/

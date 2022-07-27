@@ -1,0 +1,83 @@
+/*---------- landing teacher testimonials css ----------*/
+.lt-testimonials-slider{
+  margin: 0 10px;
+}
+.lt-testimonials-item{
+  margin: 5px;
+  padding: 15px;
+  background-color: $color-white;
+  @include border-radius(4px);
+  @include box-shadow(0 0 5px rgba($color-black,0.15));
+  &__head{
+    padding-left: 58px;
+    position: relative;
+    z-index: 1;
+    min-height: 50px;
+    padding-top: 7px;
+  }
+  &__img{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    @include border-radius(100%);
+    img{
+      min-height: 50px;
+      height: auto;
+    }
+  }
+  &__title{
+    display: block;
+    font-weight: 700;
+  }
+  &__poi{
+    display: block;
+  }
+  &__content{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 20px;
+    height: 160px;
+    background-image: url("../images/text-quotes.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    p{
+      margin: 0;
+    }
+  }
+}
+//landing teacher testimonials responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .lt-testimonials-slider{
+    margin: 0 20px;
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .lt-testimonials-bg{
+    height: 785px;
+    background-image: url("../images/lt-testimonials-bg.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+  .lt-testimonials-slider{
+    margin: 0 30px;
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .lt-testimonials-slider{
+    margin: 0 40px;
+  }
+  .lt-testimonials-item{
+    padding: 20px;
+  }
+}
+//end landing teacher testimonials responsive css
+/*---------- end landing teacher testimonials css ----------*/

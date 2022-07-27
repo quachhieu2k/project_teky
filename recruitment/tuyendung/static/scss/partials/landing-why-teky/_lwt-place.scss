@@ -1,0 +1,113 @@
+/*---------- landing why teky place css ----------*/
+.lwt-place-bg{
+  position: relative;
+  z-index: 2;
+  &__left{
+    margin-bottom: 20px;
+  }
+  .b-maincontent{
+    p{
+      margin-bottom: 15px;
+    }
+  }
+}
+.lwt-place-slider{
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+  .owl-stage-outer{
+    @include box-shadow(0 0 5px rgba($color-black,0.15));
+    @include border-radius(4px);
+  }
+  .c-contact-item{
+    @include box-shadow(none);
+  }
+  .owl-carousel{
+    .owl-nav{
+      text-align: center;
+      padding-top: 15px;
+      button.owl-prev, button.owl-next{
+        display: inline-block;
+        vertical-align: middle;
+        width: 50px;
+        height: 50px;
+        background: rgba($color-black,0.6);
+        color: $color-secondary;
+        text-align: center;
+        line-height: 50px;
+        font-size: 28px;
+        margin: 0 10px;
+        @include border-radius(100%);
+        &:before{
+          font-family: $font-awesome-5-free;
+          font-weight: 900;
+        }
+        &:focus{
+          outline: none;
+        }
+      }
+      button.owl-prev{
+        &:before{
+          content: "\f104";
+        }
+      }
+      button.owl-next{
+        &:before{
+          content: "\f105";
+        }
+      }
+    }
+  }
+}
+//landing why teky place responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .lwt-place-bg{
+    background-image: url("../images/lwt-place-bg.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .lwt-place-slider{
+    .owl-carousel{
+      .owl-nav{
+        padding-top: 0;
+        button.owl-prev, button.owl-next{
+          position: absolute;
+          z-index: 2;
+          top: 50%;
+          margin: 0;
+          margin-top: -25px;
+        }
+        button.owl-prev{
+          left: -25px;
+        }
+        button.owl-next{
+          right: -25px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .lwt-place-bg{
+    &__left{
+      margin-bottom: 0;
+      float: left;
+      width: percentage(510/1170);
+    }
+    &__right{
+      float: right;
+      width: percentage(580/1170);
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+
+}
+//end landing why teky place responsive css
+/*---------- end landing why teky place css ----------*/

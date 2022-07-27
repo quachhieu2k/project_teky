@@ -1,0 +1,50 @@
+/*---------- landing why teky exam css ----------*/
+.lwt-exam-bg{
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+  &__left{
+    margin-bottom: 20px;
+  }
+  &__img{
+    text-align: center;
+    img{
+      max-width: 60%;
+    }
+  }
+}
+//landing why teky exam responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .lwt-exam-bg{
+    &__right{
+      float: right;
+      width: percentage(585/1170);
+    }
+    &__left{
+      float: left;
+      width: percentage(440/1170);
+      margin-bottom: 0;
+    }
+    &__img{
+      margin-left: percentage(-115/440);
+      margin-top: -100px;
+      img{
+        width: 100%;
+        max-width: none;
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+
+}
+//end landing why teky exam responsive css
+/*---------- end landing why teky exam css ----------*/

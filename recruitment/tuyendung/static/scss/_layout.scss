@@ -1,0 +1,46 @@
+/*---------- layout css ----------*/
+.bg-gray-light{
+  background-color: $color-bg2;
+  .c-box{
+    .c-box__title{
+      .c-box__title__shadow{
+        color: $color-white;
+      }
+    }
+  }
+}
+.l-content{
+
+}
+.l-sidebar{
+  margin-bottom: 25px;
+}
+.l-main{
+
+}
+//layout responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .l-sidebar{
+    width: 300px;
+    float: right;
+    margin-bottom: 0;
+  }
+  .l-main{
+    margin-bottom: 0;
+    float: left;
+    width: 670px;
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .l-main{
+    width: 820px;
+  }
+}
+//layout responsive css
+/*---------- end layout css ----------*/

@@ -1,0 +1,210 @@
+/*---------- landing components css ----------*/
+.lwt-oveflow{
+  overflow: hidden;
+}
+.landing-head{
+  position: relative;
+  z-index: 1;
+  &.is-bg{
+    background-image: url("../images/landing-slider-bg.png");
+    background-repeat: repeat;
+    background-position: center center;
+  }
+  &__img{
+    text-align: right;
+    img{
+      max-width: percentage(1/2);
+    }
+  }
+  &__caption{
+    position: relative;
+    z-index: 2;
+    margin-top: -50px;
+    padding-bottom: 15px;
+  }
+  &__title{
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    font-weight: 100;
+    b{
+      display: block;
+      font-weight: 900;
+      font-size: 110%;
+    }
+  }
+  &__desc{
+    margin-bottom: 15px;
+    font-size: 12px;
+    p{
+      margin-bottom: 0;
+    }
+  }
+  &__btn{
+    .btn{
+      &:focus{
+        outline: none;
+
+      }
+      .icon-right{
+        display: none;
+      }
+    }
+  }
+}
+.place-count{
+  list-style: none;
+  padding: 0;
+  .b-maincontent &{
+    margin: 0 0 15px;
+    padding-left: 0;
+  }
+  li{
+    display: inline-block;
+    max-width: 140px;
+    margin-left: 6px;
+    vertical-align: top;
+    &:first-child{
+      margin-left: 0;
+    }
+    span{
+      display: block;
+      color: $color-orange;
+      font-weight: 700;
+      font-size: 28px;
+      margin-bottom: 3px;
+    }
+  }
+}
+//landing components responsive css
+@media (min-width: 360px){
+  .landing-head{
+    &__title{
+      font-size: 24px;
+    }
+  }
+  .place-count{
+    li{
+      max-width: 150px;
+      margin-left: 10px;
+    }
+  }
+}
+@media (min-width: 375px){
+  .landing-head{
+    &__title{
+      font-size: 26px;
+    }
+  }
+}
+@media (min-width: 414px){
+  .landing-head{
+    &__title{
+      font-size: 28px;
+    }
+  }
+}
+@media (min-width: $screen-sm-min){//mobile lanscape
+  .landing-head{
+    &__title{
+      font-size: 36px;
+    }
+    &__desc{
+      font-size: 14px;
+    }
+  }
+  .place-count{
+    li{
+      margin-left: 30px;
+    }
+  }
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .landing-head{
+    &__caption{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding-bottom: 0;
+      .container{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    &__title{
+      font-size: 42px;
+      margin-bottom: 20px;
+      max-width: percentage(490/1170);
+    }
+    &__desc{
+      margin-bottom: 20px;
+      max-width: percentage(490/1170);
+    }
+    &__btn{
+      .btn{
+        .icon-right{
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .place-count{
+    .b-maincontent &{
+      margin: 0 0 25px;
+    }
+    li{
+      margin-left: 50px;
+    }
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .landing-head{
+    &__title{
+      font-size: 50px;
+      margin-bottom: 25px;
+    }
+    &__desc{
+      margin-bottom: 25px;
+    }
+  }
+  .place-count{
+    li{
+      max-width: 165px;
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .landing-head{
+    &__title{
+      font-size: 58px;
+      margin-bottom: 30px;
+    }
+    &__desc{
+      margin-bottom: 30px;
+    }
+  }
+}
+@media (min-width: 1400px){
+  .landing-head{
+    &__title{
+      font-size: 64px;
+    }
+  }
+}
+@media (max-width: 375px){
+  .landing-head{
+    &__btn{
+      .btn-lg{
+        padding: 0.625rem 1rem;
+        font-size: 14px;
+      }
+    }
+  }
+}
+//end landing components responsive css
+/*---------- end landing components css ----------*/

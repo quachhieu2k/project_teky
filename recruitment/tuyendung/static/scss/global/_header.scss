@@ -1,0 +1,185 @@
+/*---------- header css ----------*/
+.c-menu-expand{
+  width: 31px;
+  height: 31px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  margin-top: -15px;
+  left: 13px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  &:focus{
+    outline: none;
+    border: none;
+  }
+  span{
+    background-color: $color-primary;
+    font-size: 0;
+    width: 26px;
+    height: 2px;
+    position: absolute;
+    top: 15px;
+    left: 2px;
+    @include border-radius(2px);
+    &:before, &:after{
+      content: "";
+      background-color: $color-primary;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include transition-all(0.4s);
+      @include border-radius(2px);
+    }
+    &:before{
+      transform: translateY(-6px);
+      width: 100%;
+    }
+    &:after{
+      transform: translateY(6px);
+      width: 100%;
+    }
+  }
+  &.is-active{
+    span{
+      background-color: transparent;
+      left: 5px;
+      &:before, &:after{
+        background-color: $color-text;
+      }
+      &:before{
+        transform: translateY(0px) rotate(45deg);
+        width: 20px;
+      }
+      &:after{
+        transform: translateY(0px) rotate(-45deg);
+        width: 20px;
+      }
+    }
+  }
+}
+.l-nav{
+  background: $color-white;
+  position: relative;
+  z-index: 202;
+  @include box-shadow(0 3px 6px rgba($color-black,0.15));
+}
+.c-header{
+  height: 60px;
+}
+.c-logo{
+  text-align: center;
+  img{
+    width: auto;
+    height: auto;
+    max-height: 60px;
+  }
+}
+.c-language{
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  right: 15px;
+  line-height: 16px;
+  height: 26px;
+  >.c-dropdown-menu{
+    right: 0;
+    left: auto;
+    width: 150px;
+  }
+  img{
+    width: 24px;
+    height: 16px;
+  }
+  &:hover{
+    >.c-dropdown-menu{
+      z-index: 2;
+      visibility: visible;
+      opacity: 1;
+      @include transform(translate3d( 0, 10px, 0));
+      text-align: left;
+    }
+  }
+  ul{
+    li{
+      a{
+        img{
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+//.c-search{
+//  .c-search__inner{
+//    position: relative;
+//    z-index: 1;
+//  }
+//  .form-control{
+//    background-color: transparent;
+//    border: none;
+//  }
+//  .c-search__btn{
+//    position: absolute;
+//    z-index: 2;
+//    top: 0;
+//    right: 0;
+//    padding: 0;
+//    text-align: center;
+//    border: none;
+//    &:focus{
+//      outline: none;
+//    }
+//  }
+//}
+//header responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-menu-expand{
+    display: none;
+  }
+  .c-blank-space{
+    height: 60px;
+  }
+  .l-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include transition-all(0.3s);
+    &.is-transparent{
+      background: transparent;
+      @include box-shadow(none);
+      &.has-fixed{
+        background: $color-white;
+        @include box-shadow(0 3px 6px rgba($color-black,0.15));
+      }
+    }
+  }
+  .admin-bar{
+    .l-nav{
+      top: 32px;
+    }
+  }
+  .c-header{
+    position: relative;
+    z-index: 10;
+  }
+  .c-logo{
+    float: left;
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+
+}
+//header responsive css
+/*---------- end header css ----------*/

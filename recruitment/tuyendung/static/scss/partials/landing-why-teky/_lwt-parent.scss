@@ -1,0 +1,161 @@
+/*---------- landing why teky parent css ----------*/
+.lwt-parent-bg{
+  background-image: url("../images/lwt-parent-bg.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lwt-parent-outer{
+  overflow: hidden;
+}
+.lwt-parent-item{
+  padding: 20px;
+  margin: 0 15px 20px;
+  height: 100%;
+  @include border-radius(4px);
+  @include box-shadow(0 7px 15px rgba($color-black,0.1));
+  &__head{
+    padding-left: 94px;
+    min-height: 76px;
+    margin-bottom: 20px;
+  }
+  &__avatar{
+    float: left;
+    margin: 0 0 0 -94px;
+    width: 76px;
+    height: 76px;
+    border: 1px solid $color-white;
+    overflow: hidden;
+    @include border-radius(100%);
+    img{
+      height: auto;
+      min-height: 74px;
+    }
+  }
+  &__name{
+    display: block;
+    color: $color-primary;
+    font-weight: 700;
+    font-size: 18px;
+    padding-top: 5px;
+  }
+  &__content{
+    line-height: 22px;
+    min-height: 22px * 4;
+    padding-left: 15px;
+    position: relative;
+    z-index: 1;
+    &:before{
+      content: '"';
+      font-size: 22px;
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+.lwt-parent-slider{
+  .owl-carousel{
+    display: flex;
+    flex-direction: column-reverse;
+    .owl-nav{
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      button.owl-prev, button.owl-next{
+        display: inline-block;
+        vertical-align: middle;
+        width: 60px;
+        height: 60px;
+        background: $color-white;
+        color: $color-text;
+        text-align: center;
+        line-height: 60px;
+        font-size: 28px;
+        margin: 0 10px;
+        @include border-radius(100%);
+        @include box-shadow(0 7px 15px rgba($color-black,0.1));
+        &:before{
+          font-family: $font-awesome-5-free;
+          font-weight: 900;
+        }
+        &:focus{
+          outline: none;
+        }
+      }
+      button.owl-prev{
+        &:before{
+          content: "\f104";
+        }
+      }
+      button.owl-next{
+        &:before{
+          content: "\f105";
+        }
+      }
+    }
+  }
+}
+//landing why teky parent responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .lwt-parent-item{
+    padding: 30px;
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .lwt-parent-bg{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .lwt-parent-outer{
+    margin-bottom: 50px;
+    margin-top: -80px;
+  }
+  .lwt-parent-slider{
+    margin-left: -8%;
+    margin-right: -8%;
+    .owl-carousel{
+      .owl-nav{
+        padding-top: 0;
+        padding-bottom: 70px;
+        text-align: right;
+        width: $container-lg;
+        margin-left: auto;
+        margin-right: auto;
+        button.owl-prev, button.owl-next{
+          @include transition-all(0.2s);
+          &:hover{
+            background: $color-primary;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .lwt-parent-outer{
+    margin-bottom: 70px;
+    margin-top: -90px;
+  }
+  .lwt-parent-slider{
+    margin-left: -13%;
+    margin-right: -13%;
+    .owl-carousel{
+      .owl-nav{
+        width: $container-xl;
+      }
+    }
+  }
+  .lwt-parent-item{
+    padding: 40px;
+  }
+}
+//end landing why teky parent responsive css
+/*---------- end landing why teky parent css ----------*/

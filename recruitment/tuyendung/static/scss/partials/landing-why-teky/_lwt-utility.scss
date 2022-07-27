@@ -1,0 +1,97 @@
+/*---------- landing why teky utility css ----------*/
+.lwt-utility-shadow{
+  position: relative;
+  z-index: 1;
+  &:before{
+    content: "";
+    background: #fffbf8;
+    position: absolute;
+    z-index: 2;
+    top: 14%;
+    left: 0;
+    right: 0;
+    bottom: 19%;
+    transform: skewY(15deg);
+  }
+  .lwt-utility-bg{
+    position: relative;
+    z-index: 3;
+  }
+}
+.lwt-utility-bg{
+  &__right{
+    margin-bottom: 20px;
+  }
+  &__img{
+    text-align: center;
+    img{
+      max-width: 60%;
+    }
+  }
+  .b-maincontent{
+    p{
+      margin-bottom: 12px;
+    }
+    .c-line{
+      margin-bottom: 12px;
+    }
+  }
+  .list-number{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+      margin-bottom: 15px;
+      padding-left: 35px;
+      .number{
+        float: left;
+        margin: -2px 0 0 -35px;
+        background: $color-primary;
+        color: $color-white;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        line-height: 25px;
+        font-weight: 700;
+        @include border-radius(2px);
+      }
+    }
+  }
+}
+//landing why teky utility responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .lwt-utility-bg{
+    &__right{
+      margin-bottom: 0;
+      float: right;
+      width: percentage(450/1170);
+    }
+    &__left{
+      float: left;
+      width: percentage(705/1170);
+    }
+    &__img{
+      margin-right: percentage(-115/450);
+      margin-top: -40px;
+      img{
+        width: 100%;
+        max-width: none;
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .lwt-utility-bg{
+    &__img{
+      margin-top: -60px;
+    }
+  }
+}
+//end landing why teky utility responsive css
+/*---------- end landing why teky utility css ----------*/

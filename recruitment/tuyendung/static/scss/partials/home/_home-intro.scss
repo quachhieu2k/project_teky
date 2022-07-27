@@ -1,0 +1,375 @@
+/*---------- home intro css ----------*/
+.c-home-info{
+  margin-top: -100px;
+  padding-bottom: 15px;
+  display: none;
+}
+.c-intro{
+  position: relative;
+  z-index: 3;
+  margin-top: -15px;
+}
+.c-support-form{
+  background: $color-primary;
+  padding: 15px;
+  @include border-radius(4px);
+  margin-bottom: 20px;
+  &__title{
+    color: $color-white;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  .form-control{
+    border: none;
+    padding: 1.375rem .75rem;
+    //text-transform: uppercase;
+    font-family: $font-arial;
+  }
+  select.form-control{
+    height: 44px;
+    padding: 0rem .75rem;
+  }
+  .btn{
+    padding: 0.625rem .75rem;
+  }
+  .form-group{
+    margin-bottom: 15px;
+    &.is-tel{
+      position: relative;
+      z-index: 1;
+      .form-control{
+        padding: 1.375rem .75rem 1.375rem 70px;
+      }
+      .c-support-form__pre{
+        position: absolute;
+        z-index: 3;
+        top: 5px;
+        line-height: 34px;
+        height: 34px;
+        left: 0;
+        width: 58px;
+        text-align: center;
+        border-right: 1px solid $color-black;
+      }
+    }
+  }
+}
+.c-video-intro{
+  margin-bottom: 15px;
+  display: block;
+  padding-top: percentage(450/1170);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  @include border-radius(4px);
+  .c-video-intro__link{
+    text-decoration: none;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &:before{
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba($color-black,0.4);
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+      background-image: url("../images/play-button.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100% 100%;
+      width: 37px;
+      height: 50px;
+      margin-top: -25px;
+      margin-left: -18px;
+    }
+  }
+  .embed-responsive{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &.active{
+    .c-video-intro__link{
+      z-index: 2;
+    }
+    .embed-responsive{
+      z-index: 3;
+    }
+  }
+}
+.c-intro-count{
+  margin-bottom: 20px;
+  &__top{
+    margin-bottom: 5px;
+    display: none;
+    label{
+      font-weight: 700;
+      font-size: 18px;
+      display: block;
+      margin: 0;
+    }
+  }
+  .bg-primary{
+    padding: 10px 0;
+    label{
+      font-weight: 700;
+      font-size: 18px;
+      color: $color-white;
+      display: block;
+      margin: 0 0 5px;
+    }
+    .number{
+      color: $color-white;
+      font-weight: 900;
+      font-size: 30px;
+    }
+    p{
+      margin: 0 0 15px;
+      text-transform: uppercase;
+      color: $color-white;
+    }
+  }
+}
+.c-course-slider{
+  margin-bottom: 15px;
+}
+.c-course-in{
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  @include border-radius(4px);
+  &__thumb{
+    overflow: hidden;
+    a{
+      display: block;
+      padding-top: percentage(250/370);
+      position: relative;
+      z-index: 1;
+      img{
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        height: auto;
+        min-height: 100%;
+      }
+    }
+  }
+  &__content{
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $color-primary;
+    padding: 2px 15px 10px;
+    &:before{
+      content: "";
+      position: absolute;
+      z-index: 2;
+      height: 66px;
+      left: 0;
+      right: 0;
+      top: -65px;
+      background-image: url("../images/course-in-caret.png");
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  &__row{
+    text-align: right;
+    margin-bottom: 5px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__age{
+    color: $color-white;
+    text-transform: uppercase;
+  }
+  .c-course-in__title{
+    color: $color-white;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    line-height: 1.3;
+    font-size: 15px;
+  }
+  .c-course-in__more{
+    color: $color-white;
+    text-decoration: none;
+    float: left;
+    font-weight: 700;
+    text-transform: uppercase;
+    span{
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+  }
+}
+//home intro responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .c-intro{
+    margin-top: -40px;
+  }
+  .c-intro-count{
+    &__top{
+      display: block;
+    }
+    .bg-primary{
+      label{
+        display: none;
+      }
+      p{
+        margin: 0;
+      }
+    }
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-home-info{
+    display: block;
+  }
+  .c-intro{
+    margin-top: -60px;
+  }
+  .c-support-form{
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    &__row{
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+    &__col{
+      float: left;
+      padding-left: 5px;
+      padding-right: 5px;
+      width: 22%;
+      &.is-button{
+        width: 12%;
+      }
+    }
+  }
+  .c-video-intro{
+    margin-bottom: 25px;
+    a{
+      @include transition-all(0.2s);
+      &:before{
+        @include transition-all(0.2s);
+      }
+      &:after{
+        width: 74px;
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -37px;
+        @include transition-all(0.2s);
+      }
+      &:hover{
+        &:before{
+          background: rgba($color-black,0.2);
+        }
+        &:after{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .c-intro-count{
+    margin-bottom: 30px;
+  }
+  .c-course-in{
+    &__content{
+      padding: 2px 20px 10px;
+    }
+    &:hover{
+      .c-course-in__content{
+        background: $color-secondary;
+        &:before{
+          background-image: url("../images/course-in-caret-hover.png");
+        }
+      }
+      .c-course-in__title{
+        color: $color-text;
+      }
+      .c-course-in__more{
+        color: $color-text;
+        .icon16-arrow-right{
+          background-image: url("../images/icons/icon16-arrow-right-black.png");
+        }
+      }
+      .c-course-in__age{
+        color: $color-text;
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .c-home-info{
+    font-size: 15px;
+  }
+  .c-support-form{
+    &__row{
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+    &__col{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .form-control{
+      padding:  1.875rem .75rem;
+    }
+    select.form-control{
+      height: 60px;
+      padding: 0rem .75rem;
+    }
+    .btn{
+      padding: 1.125rem .75rem;
+    }
+    .form-group{
+      margin-bottom: 5px;
+      &.is-tel{
+        .form-control{
+          padding: 1.875rem .75rem 1.875rem 70px;
+        }
+        .c-support-form__pre{
+          top: 10px;
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1400px){
+  .c-home-info{
+    font-size: 16px;
+  }
+}
+//end home intro responsive css
+/*---------- end home intro css ----------*/

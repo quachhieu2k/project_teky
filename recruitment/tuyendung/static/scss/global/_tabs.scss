@@ -1,0 +1,91 @@
+/*---------- tabs css ----------*/
+.c-tabs{
+  margin-bottom: 20px;
+  &__title{
+    .nav-tabs{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-bottom: none;
+      display: block;
+      .nav-item{
+        margin-bottom: 5px;
+      }
+      .nav-link{
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: $color-time;
+        border: none;
+        border-bottom: 5px solid $color-border;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 16px;
+        &.active{
+          color: $color-text;
+          border-bottom-color: $color-primary;
+        }
+      }
+    }
+  }
+  &__pane{
+    display: none;
+    padding: 20px 0 0;
+    &.active{
+      display: block;
+    }
+    .c-box{
+      margin-bottom: 20px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+//tabs responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .c-tabs{
+    margin-bottom: 25px;
+    &__pane{
+      padding: 25px 0 0;
+      .c-box{
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-tabs{
+    margin-bottom: 30px;
+    &__title{
+      .nav-tabs{
+        margin: 0 -1px;
+        overflow: hidden;
+      }
+      .nav-item{
+        margin-bottom: 0;
+        float: left;
+        width: percentage(1/3);
+        padding-left: 1px;
+        padding-right: 1px;
+      }
+      .nav-link{
+        font-size: 18px;
+      }
+    }
+    &__pane{
+      padding: 30px 0 0;
+      .c-box{
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+
+}
+//end tabs responsive css
+/*---------- end tabs css ----------*/

@@ -1,0 +1,69 @@
+/*---------- recruitment detail css ----------*/
+.c-recruitment-use{
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+      margin-bottom: 15px;
+      min-height: 32px;
+      padding-left: 42px;
+      position: relative;
+      z-index: 1;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      [class*="icon32"]{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+      }
+      p{
+        margin: 0;
+      }
+    }
+  }
+}
+.c-recruitment-top{
+  &.is-detail{
+    min-height: 0;
+    .c-recruitment-top__title{
+      margin-bottom: 15px;
+    }
+  }
+}
+//recruitment detail responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+
+}
+@media (min-width: $screen-md-min){//ipad portrait
+
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-recruitment-top{
+    &.is-detail{
+      .c-recruitment-top__content{
+        float: none;
+        width: auto;
+        padding: 20px 15px;
+      }
+      .c-recruitment-top__title{
+        padding-top: 30px;
+        margin-bottom: 0;
+        font-size: 18px;
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .c-recruitment-top{
+    &.is-detail{
+      .c-recruitment-top__content{
+        padding: 25px 20px;
+      }
+    }
+  }
+}
+//end recruitment detail responsive css
+/*---------- end recruitment detail css ----------*/

@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import index
+from .views import detail, recruitment
 
 urlpatterns = [
-    path('', index )
+    path('detail', detail ),
+    path('', recruitment)
     ]

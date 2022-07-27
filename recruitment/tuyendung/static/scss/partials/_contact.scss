@@ -1,0 +1,267 @@
+/*---------- contact css ----------*/
+.c-contact-item{
+  height: 100%;
+  @include box-shadow(0 0 5px rgba($color-black,0.15));
+  @include border-radius(4px);
+  &__map{
+    position: absolute;
+    z-index: 4;
+    left: 10px;
+    right: 10px;
+    top: 50%;
+    text-align: center;
+    font-weight: 700;
+    color: $color-white;
+    text-transform: uppercase;
+    line-height: 20px;
+    margin-top: -10px;
+    opacity: 0;
+    @include transition-all(0.2s);
+    .fas{
+      margin-right: 5px;
+    }
+  }
+  &__thumb{
+    overflow: hidden;
+    @include border-radius(4px 4px 0 0);
+    a{
+      display: block;
+      position: relative;
+      z-index: 1;
+      padding-top: percentage(250/370);
+      &:before{
+        content: "";
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($color-primary,0.5);
+        @include transition-all(0.2s);
+        opacity: 0;
+      }
+    }
+    img{
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__row{
+    padding: 12px 15px;
+    line-height: 1.5;
+    &:first-child{
+      background: $color-bg2;
+    }
+  }
+  .c-contact-item__title{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 3px;
+  }
+  &__address{
+    color: $color-time;
+    font-size: 12px;
+  }
+  .c-contact-item__phone{
+    display: block;
+    color: $color-text;
+    text-decoration: none;
+    [class*="icon16"]{
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+  }
+  .c-contact-item__facebook{
+    display: block;
+    color: $color-text;
+    text-decoration: none;
+    [class*="icon16"]{
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+  }
+  .c-contact-item__email{
+    display: block;
+    color: $color-text;
+    text-decoration: none;
+    .fas{
+      vertical-align: middle;
+      margin-right: 4px;
+      color: $color-primary;
+    }
+  }
+}
+.c-contact-item{
+  &__thumb{
+    a{
+      &:hover{
+        &:before{
+          opacity: 1;
+        }
+        .c-contact-item__map{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.c-contact-grid{
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+      padding-bottom: 20px;
+    }
+  }
+}
+.c-contact-intro{
+  margin-bottom: 15px;
+  &__img{
+    margin-bottom: 15px;
+    height: 90px;
+    img{
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 90px;
+    }
+  }
+  &__text{
+    line-height: 1.5;
+    h6{
+      font-weight: 700;
+      font-size: 14px;
+      margin: 0;
+      line-height: 1.5;
+      color: $color-red;
+    }
+    p{
+      margin: 0;
+      line-height: 1.5;
+    }
+    a{
+      color: $color-text;
+      text-decoration: none;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    a+a{
+      &:before{
+        content: "|";
+        margin-left: 4px;
+        margin-right: 8px;
+        color: $color-text;
+      }
+    }
+  }
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+      padding-bottom: 20px;
+      text-align: center;
+    }
+  }
+}
+//contact responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+  .c-contact-grid{
+    ul{
+      margin: 0 -5px;
+      li{
+        float: left;
+        width: percentage(1/2);
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+  }
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .c-contact-grid{
+    ul{
+      margin: 0 -10px;
+      li{
+        width: percentage(1/3);
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+  .c-contact-intro{
+    margin-bottom: 0;
+    ul{
+      margin: 0 -10px;
+      li{
+        float: left;
+        width: percentage(1/3);
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 35px;
+      }
+    }
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-contact-item{
+    a.c-contact-item__phone{
+      @include transition-all(0.2s);
+      &:hover{
+        color: $color-primary;
+      }
+    }
+    a.c-contact-item__facebook{
+      @include transition-all(0.2s);
+      &:hover{
+        color: $color-primary;
+      }
+    }
+    a.c-contact-item__email{
+      @include transition-all(0.2s);
+      &:hover{
+        color: $color-primary;
+      }
+    }
+  }
+  .c-contact-intro{
+    &__img{
+      height: 130px;
+      img{
+        max-height: 130px;
+      }
+    }
+    &__text{
+      a{
+        @include transition-all(0.2s);
+        &:hover{
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .c-contact-grid{
+    ul{
+      margin: 0 -15px;
+      li{
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 40px;
+      }
+    }
+  }
+}
+//end contact responsive css
+/*---------- end contact css ----------*/

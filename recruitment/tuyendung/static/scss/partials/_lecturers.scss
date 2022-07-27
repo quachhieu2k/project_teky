@@ -1,0 +1,103 @@
+/*---------- lecturers css ----------*/
+.c-lecturers-grid{
+  .c-team-item{
+    padding-top: percentage(250/535);
+    &:before{
+      top: -60%;
+      right: -50%;
+    }
+    &__content{
+      text-align: right;
+    }
+  }
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+      padding-bottom: 20px;
+      &:nth-child(2n){
+        .c-team-item{
+          &:before{
+            right: auto;
+            left: -50%;
+            @include transform(rotate(-45deg));
+          }
+        }
+      }
+    }
+  }
+}
+//lecturers responsive css
+@media (min-width: $screen-sm-min){//mobile lanscape
+  .c-lecturers-grid{
+    .c-team-item{
+      &__content{
+        padding: 0 20px 15px 0;
+      }
+    }
+  }
+}
+@media (min-width: $screen-md-min){//ipad portrait
+  .c-lecturers-grid{
+    ul{
+      margin: 0 -10px;
+      li{
+       width: percentage(1/2);
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 25px;
+      }
+    }
+  }
+}
+@media (min-width: $screen-lg-min){//ipad lanscape & pc 1024x768px
+  .c-lecturers-grid{
+    ul{
+      margin: 0 -15px;
+      li{
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
+@media (min-width: $screen-xl-min){//pc & mac 1280px grow up
+  .c-lecturers-grid{
+    ul{
+      margin: 0 -20px;
+      li{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+      }
+    }
+  }
+}
+@media (min-width: 1400px){
+  .c-lecturers-grid{
+    ul{
+      margin: 0 -30px;
+      li{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 45px;
+      }
+    }
+  }
+}
+@media (min-width: 1600px){
+  .c-lecturers-grid{
+    ul{
+      margin: 0 -50px;
+      li{
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+    }
+  }
+}
+//end lecturers responsive css
+/*---------- end lecturers css ----------*/
